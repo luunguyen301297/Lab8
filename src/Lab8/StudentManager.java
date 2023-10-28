@@ -167,8 +167,7 @@ public class StudentManager {
     }
   }
 
-  public void writeToFile() {
-    String path = "C:\\Users\\ad\\Desktop\\Students.txt";
+  public void writeToFile(String path) {
     try {
       FileWriter myWriter = new FileWriter(path, true);
       for (int i = 0; i < studentList.size(); i++) {
@@ -187,13 +186,13 @@ public class StudentManager {
       File newFile = new File(path);
       if(!newFile.exists()){
         newFile.createNewFile();
-        writeToFile();
+        writeToFile(path);
         System.out.println("File was created with path : " + path);
       } else {
         System.err.println("File already exists ! Do you want to write data to file ? (Y/N) : ");
         Scanner scanner = new Scanner(System.in);
         if (scanner.nextLine().equalsIgnoreCase("y")) {
-          writeToFile();
+          writeToFile(path);
         } else {
           System.out.println("Exit the program !");
         }

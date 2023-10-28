@@ -22,11 +22,11 @@ public interface ILevel {
     int inSchool = dayNow.getYear() - enrollDate.getYear();
     if (inSchool >= 0 && inSchool < 6) {
       level = LEVEL.PRIMARY;
-    } else if (inSchool >= 6 && inSchool < 9) {
+    } else if (inSchool >= 6 && inSchool < 10) {
       level = LEVEL.JUNIOR;
-    } else if (inSchool >= 10 && inSchool < 12) {
+    } else if (inSchool >= 10 && inSchool < 13) {
       level = LEVEL.HIGH;
-    } else if (inSchool > 12) {
+    } else if (inSchool >= 13) {
       level = LEVEL.UNIVERSITY;
     }
     return level;
