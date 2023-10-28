@@ -49,8 +49,8 @@ public class Student implements ILevel{
     } else {
       System.err.println("Incorrect name format");
       System.out.println("Try again :");
-      return false;
     }
+    return false;
   }
 
   public String getAddress() {
@@ -64,8 +64,8 @@ public class Student implements ILevel{
     } else {
       System.err.println("Incorrect address format");
       System.out.println("Try again :");
-      return false;
     }
+    return false;
   }
 
   public String getPhoneNumber() {
